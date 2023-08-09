@@ -19,15 +19,19 @@ export class RecipesService {
       'What else neet to say',
       'https://upload.wikimedia.org/wikipedia/commons/6/62/NCI_Visuals_Food_Hamburger.jpg',
       [new Ingredient('Buns', 2), new Ingredient('Meat', 1)]
-    )
+    ),
   ];
-  constructor (private shoppingListService: ShoppingListService) {}
+  constructor(private shoppingListService: ShoppingListService) {}
 
-  getRecipes () {
+  getRecipes() {
     return this.recipes.slice();
   }
 
-  addIngredientsToShoppingList (ingredients: Ingredient[]) {
+  getRecipe(id: number) {
+    return this.recipes[id];
+  }
+
+  addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients);
   }
 }
