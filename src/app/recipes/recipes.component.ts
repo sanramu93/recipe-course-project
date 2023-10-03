@@ -7,12 +7,11 @@ import { RecipesService } from './recipes.service';
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
   styleUrls: ['./recipes.component.css'],
-  providers: [RecipesService]
 })
 export class RecipesComponent implements OnInit {
   selectedRecipe: Recipe;
 
-  constructor () {}
+  constructor() {}
 
-  ngOnInit () {}
+  ngOnInit() {}
 }
